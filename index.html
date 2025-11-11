@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FOREST Computer Club</title>
+  <style>
+    :root{
+      --accent:#e9b949;
+      --muted:#555;
+      --bg:#d9d9d9; /* сірий фон */
+      --card:#ffffff;
+      --radius:14px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#111;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:32px;
+    }
+
+    header{
+      background:#fff;
+      border-radius:20px;
+      padding:18px;
+      margin-bottom:24px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .brand{
+      font-weight:700;
+      font-size:1.3rem;
+      color:var(--accent);
+      letter-spacing:1px;
+    }
+
+    nav a{
+      margin-left:16px;
+      text-decoration:none;
+      color:#444;
+      font-weight:600;
+    }
+
+    .hero{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .hero-text{
+      flex:1;
+    }
+
+    .hero img{
+      width:420px;
+      border-radius:14px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .card{
+      background:var(--card);
+      padding:20px;
+      border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .cta{
+      display:inline-block;
+      background:var(--accent);
+      color:white;
+      padding:10px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      margin-top:10px;
+    }
+
+    /* Новий розділ із мотиваційним текстом */
+    .promo{
+      background:#fff;
+      border-radius:var(--radius);
+      padding:40px;
+      margin-bottom:40px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      text-align:center;
+    }
+
+    .promo h2{
+      font-size:2rem;
+      color:var(--accent);
+      margin-bottom:16px;
+    }
+
+    .promo p{
+      max-width:800px;
+      margin:0 auto 12px auto;
+      font-size:1.1rem;
+      color:#333;
+      line-height:1.6;
+    }
+
+    .promo strong{
+      color:#000;
+    }
+
+    footer{
+      margin-top:32px;
+      text-align:center;
+      color:#555;
+      font-size:0.9rem;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    input, textarea{
+      width:100%;
+      padding:10px;
+      border-radius:8px;
+      border:1px solid #ccc;
+    }
+
+    button{
+      padding:10px 14px;
+      border-radius:10px;
+      border:0;
+      background:var(--accent);
+      color:white;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="card">
+      <div class="nav">
+        <div class="brand">FOREST Computer Club</div>
+        <nav>
+          <a href="#about">Проєкт</a>
+          <a href="#promo">Про клуб</a>
+          <a href="#contact">Контакт</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1 id="about">Комп'ютерний клуб "FOREST"</h1>
+          <p>FOREST — це комп'ютерний клуб для тих, хто хоче грати з максимальною концентрацією, комфортом та якістю.</p>
+          <a class="cta" href="#contact">Зв'язатися</a>
+        </div>
+        <img src="assets/img/Знімок екрана (2).png" alt="FOREST">
+      </section>
+
+      <!-- Новий блок із закликом -->
+      <section id="promo" class="promo">
+        <h2>🌲 FOREST — територія справжніх геймерів</h2>
+        <p>Тут кожен раунд — як перший подих свіжого повітря. <strong>FOREST</strong> — це не просто комп’ютерний клуб, а місце, де гра перетворюється на емоцію.</p>
+        <p>Потужні ПК, комфортні крісла, атмосферне освітлення і команда, яка завжди поруч — усе створено для того, щоб ти міг повністю зануритись у гру.</p>
+        <p><strong>💥 Без лагів. Без шуму. Без компромісів.</strong><br>Тільки ти, твоя команда і перемога.</p>
+        <p><strong>🎮 Завітай до FOREST — відчуй, що таке справжній геймінг!</strong></p>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Контактна форма</h2>
+        <form onsubmit="event.preventDefault(); alert('Форма відправлена');">
+          <label for="name">Ім'я</label>
+          <input id="name" type="text" placeholder="Ваше ім'я" required>
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="name@example.com" required>
+
+          <label for="message">Повідомлення</label>
+          <textarea id="message" rows="4" placeholder="Тут ваше повідомлення"></textarea>
+
+          <button type="submit">Відправити</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> FOREST Computer Club</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
